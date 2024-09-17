@@ -27,9 +27,10 @@ if ((userChallenge == "Yes") || (userChallenge == "YES") || (userChallenge == "y
         for (int round = 1; round <= 5; round++)
         {
             //initialization of my vars used to calc between Heads, Tails, and the random numbers. Also resets all values for rounds.
+            //I remembered vars in C# dont need to have values assigned to them for initialization, so I removed the blank "" for useranswer.
             bool Heads = false;
             bool Tails = false;
-            string userAnswer = "";
+            string userAnswer;
             
 
             //Figured out the gist of this Class through using Microsoft's documentation.
@@ -57,7 +58,7 @@ if ((userChallenge == "Yes") || (userChallenge == "YES") || (userChallenge == "y
             }
 
         }
-        Console.WriteLine("Congrats! Your score is " + userScore + ". Nice going.");
+        Console.WriteLine("Congrats! Your score is " + userScore + "/5. Nice going.");
         Console.WriteLine("Would You like to repeat the challenge, " + userName +"?");
         userChallenge =  Console.ReadLine();
     }
